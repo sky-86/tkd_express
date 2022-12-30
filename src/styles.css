@@ -1,0 +1,34 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.navbar-brand>img {
+  padding: 7px 14px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 60vh;
+  flex-direction: column;
+}

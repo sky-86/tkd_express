@@ -1,5 +1,3 @@
-import './calendar.css';
-
 // https://support.google.com/calendar/answer/41207?hl=en
 // google calender
 function Calendar() {

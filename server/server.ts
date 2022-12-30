@@ -9,13 +9,13 @@ const PORT = process.env.PORT || 8080;
 // get path to react build
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const client_path = path.join(__dirname, '..', 'client');
+const client_path = path.join(__dirname, '..', 'client/');
 
 // tell express to use the react build
 app.use(express.static(client_path));
 
 // serve react
-app.get('/', function (req, res) {
+app.get('/*', function (_req, res) {
   res.sendFile(client_path + "index.html");
 });
 

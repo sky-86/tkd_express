@@ -1,15 +1,26 @@
 import React from 'react';
-//import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
+
 import NavBar from './components/navbar';
-import Calendar from './components/calendar';
+import * as Pages from './pages/pages';
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Calendar />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<NavBar />}>
+          <Route index element={<Pages.HomePage />} />
+          <Route path='programs' element={<Pages.ProgramsPage />} />
+          <Route path='faq' element={<Pages.FaqPage />} />
+          <Route path='about' element={<Pages.AboutPage />} />
+          <Route path='contact' element={<Pages.ContactPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
